@@ -59,3 +59,24 @@ variable "security_group_name" {
   type        = string
   default     = "efs_sg"
 }
+
+###########
+# Backups #
+###########
+variable "backup_plan_delete_after" {
+  description = "Specifies the number of days after creation that a recovery point is deleted"
+  type        = string
+  default     = "15"
+}
+
+variable "backup_plan_schedule" {
+  description = "A CRON expression specifying when AWS Backup initiates a backup job."
+  type        = string
+  default     = "cron(0 4 * * ?)"
+}
+
+variable "backup_enabled" {
+  description = "Control the creation of backup plan"
+  type        = bool
+  default     = true
+}
