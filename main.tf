@@ -1,5 +1,5 @@
 module "efs" {
-  source = "github.com/cloudposse/terraform-aws-efs.git?ref=0.11.0"
+  source = "github.com/cloudposse/terraform-aws-efs.git?ref=0.14.0"
 
   name             = var.name
   region           = var.vpc_state_region
